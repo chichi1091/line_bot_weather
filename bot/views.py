@@ -61,7 +61,7 @@ def handle_message(event):
         json = json.loads(result.text)
         logger.info(json)
 
-        message = ''
+        message = '長野県長野市の天気は\r\n\r\n'
         for detail in json['forecasts']:
             dateLabel = detail['dateLabel']
             date = detail['date']
@@ -69,6 +69,7 @@ def handle_message(event):
             min = detail['temperature']['min'].get('celsius', '?') if detail['temperature']['min'] is not None else "?"
             max = detail['temperature']['max'].get('celsius', '?') if detail['temperature']['max'] is not None else "?"
             message += "{0}({1}):{2} {3}℃/{4}℃ \r\n\r\n".format(dateLabel, date, telop, min, max)
+        message += "です"
 
         line_bot_api.reply_message(
             event.reply_token,
