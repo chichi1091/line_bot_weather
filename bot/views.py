@@ -58,18 +58,14 @@ def handle_message(event):
 
     import json
     json = json.loads(result.text)
+    logger.info(json)
+
+    message = json.get('title', 'タイトル') + "\r\n"
+    message += json.get('description', '説明') + "\r\n"
+    message += json.get('forecasts', '詳細') + "\r\n"
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=json.get('title', 'タイトル'))
+        TextSendMessage(text=message)
     )
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=json.get('description', '説明'))
-    )
-
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=json.get('forecasts', '説明'))
-    )
