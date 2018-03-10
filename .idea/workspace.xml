@@ -22,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/line_bot_weather/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+              <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding>
                 <element signature="e#317#326#0" expanded="true" />
               </folding>
@@ -323,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520677492668</updated>
-      <workItem from="1520677499303" duration="5558000" />
+      <workItem from="1520677499303" duration="5680000" />
     </task>
     <task id="LOCAL-00001" summary="heroku準備&#10;アクセストークンを環境変数より取得">
       <created>1520679388524</created>
@@ -395,11 +395,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520684363601</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="いったんDebugをTrue">
+      <created>1520684598145</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1520684598145</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5558000" />
+    <option name="totallyTimeSpent" value="5680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1806" y="177" width="1440" height="821" extended-state="0" />
@@ -453,7 +460,8 @@
     <MESSAGE value="クラス化" />
     <MESSAGE value="csrf有効" />
     <MESSAGE value="gunicorn修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="gunicorn修正" />
+    <MESSAGE value="いったんDebugをTrue" />
+    <option name="LAST_COMMIT_MESSAGE" value="いったんDebugをTrue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -525,7 +533,7 @@
     <entry file="file://$PROJECT_DIR$/line_bot_weather/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding>
             <element signature="e#317#326#0" expanded="true" />
           </folding>
