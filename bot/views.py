@@ -2,6 +2,7 @@
 import os
 import logging
 
+from django.http import HttpResponseForbidden, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
 from rest_framework.views import APIView
@@ -9,11 +10,11 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
 from linebot import (
-    LineBotApi, WebhookHandler
-)
+    LineBotApi, WebhookHandler,
+    HttpResponse)
 from linebot.exceptions import (
-    InvalidSignatureError
-)
+    InvalidSignatureError,
+    LineBotApiError)
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
@@ -34,11 +35,13 @@ def callback(request):
         try:
             handler.handle(request.body.decode('utf-8'), signature)
         except InvalidSignatureError:
-            return Response(HTTP_400_BAD_REQUEST)
+            return HttpResponseForbidden()
+        except LineBotApiError:
+            return HttpResponseBadRequest()
 
-        return Response("OK", HTTP_200_OK)
+        return HttpResponse()
     else:
-        return Response("NG", HTTP_400_BAD_REQUEST)
+        return HttpResponseBadRequest()
 
 
 @handler.default()
@@ -57,4 +60,5 @@ def handle_message(event):
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=event.message.text)
+    )
