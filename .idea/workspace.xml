@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ea2d7533-c477-48c5-b4ab-2b25b468579e" name="デフォルト" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change beforePath="$PROJECT_DIR$/bot/urls.py" afterPath="$PROJECT_DIR$/bot/urls.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/line_bot_weather/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="e#26#58#0" expanded="true" />
               </folding>
@@ -87,9 +87,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/bot/views.py" />
-        <option value="$PROJECT_DIR$/bot/urls.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/line_bot_weather/settings.py" />
+        <option value="$PROJECT_DIR$/bot/urls.py" />
       </list>
     </option>
   </component>
@@ -323,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520677492668</updated>
-      <workItem from="1520677499303" duration="5997000" />
+      <workItem from="1520677499303" duration="6170000" />
     </task>
     <task id="LOCAL-00001" summary="heroku準備&#10;アクセストークンを環境変数より取得">
       <created>1520679388524</created>
@@ -423,11 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520684979404</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="psycopg2-binaryをインストール">
+      <created>1520685037052</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1520685037052</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5997000" />
+    <option name="totallyTimeSpent" value="6170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1806" y="177" width="1440" height="821" extended-state="0" />
@@ -518,26 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#26#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="e#26#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -560,6 +547,26 @@
           <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding>
             <element signature="e#317#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#26#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#26#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
