@@ -14,8 +14,7 @@ HEADER = {
 
 def callback(request):
     reply = ""
-    request_json = json.loads(request.body.decode('utf-8'))
-    for e in request_json['events']:
+    for e in request.json['events']:
         reply_token = e['replyToken']
         message_type = e['message']['type']
 
@@ -28,7 +27,7 @@ def callback(request):
 
 def reply_text(reply_token, text):
     payload = {
-        "replyToken":reply_token,
+        "replyToken": reply_token,
         "messages": [
             {
                 "type": "text",
