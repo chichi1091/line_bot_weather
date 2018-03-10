@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ea2d7533-c477-48c5-b4ab-2b25b468579e" name="デフォルト" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -322,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520677492668</updated>
-      <workItem from="1520677499303" duration="5933000" />
+      <workItem from="1520677499303" duration="5997000" />
     </task>
     <task id="LOCAL-00001" summary="heroku準備&#10;アクセストークンを環境変数より取得">
       <created>1520679388524</created>
@@ -415,11 +416,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520684881709</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="psycopg2-binaryをインストール">
+      <created>1520684979404</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1520684979404</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5933000" />
+    <option name="totallyTimeSpent" value="5997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1806" y="177" width="1440" height="821" extended-state="0" />
@@ -476,7 +484,8 @@
     <MESSAGE value="いったんDebugをTrue" />
     <MESSAGE value="DebugをFalse" />
     <MESSAGE value="gunicornをインストール" />
-    <option name="LAST_COMMIT_MESSAGE" value="gunicornをインストール" />
+    <MESSAGE value="psycopg2-binaryをインストール" />
+    <option name="LAST_COMMIT_MESSAGE" value="psycopg2-binaryをインストール" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -487,14 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -541,6 +542,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding />
         </state>
       </provider>
