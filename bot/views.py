@@ -1,19 +1,27 @@
 # -*- encoding: utf-8 -*-
 import os
-import json
-import requests
 import logging
+
+from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
-ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
-HEADER = {
-    "Content-Type": "application/json",
-    "Authorization": "Bearer " + ACCESS_TOKEN
-}
+from linebot import (
+    LineBotApi, WebhookHandler
+)
+from linebot.exceptions import (
+    InvalidSignatureError
+)
+from linebot.models import (
+    MessageEvent, TextMessage, TextSendMessage,
+)
 
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+CHANNEL_SECRET = os.environ['CHANNEL_SECRET']
+
+line_bot_api = LineBotApi(ACCESS_TOKEN)
+handler = WebhookHandler(CHANNEL_SECRET)
 logger = logging.getLogger(__name__)
 
 
@@ -21,31 +29,17 @@ class LineBotView(APIView):
     permission_classes = (AllowAny,)
 
     def post(self, request, format=None):
-        logger.info(request.POST)
-        
-        reply = ""
-        for e in request.POST['events']:
-            logger.info("{0}".format(e))
+        signature = request.META['X-Line-Signature']
 
-            reply_token = e['replyToken']
-            message_type = e['message']['type']
+        try:
+            handler.handle(request.raw_post_data, signature)
+        except InvalidSignatureError:
+            return Response(HTTP_400_BAD_REQUEST)
 
-            if message_type == 'text':
-                text = e['message']['text']
-                reply += self.reply_text(reply_token, text)
+        return Response("OK", HTTP_200_OK)
 
-        return Response(reply)
-
-    def reply_text(self, reply_token, text):
-        payload = {
-            "replyToken": reply_token,
-            "messages": [
-                {
-                    "type": "text",
-                    "text": text
-                }
-            ]
-        }
-
-        requests.post(REPLY_ENDPOINT, headers=HEADER, data=json.dumps(payload))
-        return text
+    @handler.add(MessageEvent, message=TextMessage)
+    def handle_message(event):
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=event.message.text))
