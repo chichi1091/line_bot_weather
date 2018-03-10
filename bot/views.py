@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 import os
 import logging
+import requests
 
 from django.http import HttpResponse, HttpResponseForbidden, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
@@ -48,7 +49,27 @@ def default(event):
 def handle_message(event):
     logger.info(event)
 
+    result = requests.get("http://weather.livedoor.com/forecast/webservice/json/v1?city=200010")
+    if result.status_code != 200:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=result.text)
+        )
+
+    import json
+    json = json.loads(result.text)
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text)
+        TextSendMessage(text=json.get('title', 'タイトル'))
+    )
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=json.get('description', '説明'))
+    )
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=json.get('forecasts', '説明'))
     )
