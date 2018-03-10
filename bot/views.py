@@ -49,25 +49,35 @@ def default(event):
 def handle_message(event):
     logger.info(event)
 
-    result = requests.get("http://weather.livedoor.com/forecast/webservice/json/v1?city=200010")
-    if result.status_code != 200:
+    if event.message.text.find('天気'):
+        result = requests.get("http://weather.livedoor.com/forecast/webservice/json/v1?city=200010")
+        if result.status_code != 200:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=result.text)
+            )
+
+        import json
+        json = json.loads(result.text)
+        logger.info(json)
+
+        message = ''
+        for detail in json['forecasts']:
+            dateLabel = detail['dateLabel']
+            date = detail['date']
+            telop = detail['telop']
+            min = detail['temperature']['min'].get('celsius', '?')
+            max = detail['temperature']['max'].get('celsius', '?')
+            message += "{0}({1}):{2} {3}℃/{4}℃ \r\n".format(dateLabel, date, telop, min, max)
+
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=result.text)
+            TextSendMessage(text=message)
+        )
+    else:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=event.message.text)
         )
 
-    import json
-    json = json.loads(result.text)
-    logger.info(json)
-
-    message = ''
-    for detail in json['forecasts']:
-        message += "{0}({1}):{2} {3}℃/{4}℃ \r\n".format(detail['dateLabel'], detail['date'], detail['telop']
-                                                   , detail['temperature']['min'], detail['temperature']['max'])
-
-
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=message)
-    )
 
