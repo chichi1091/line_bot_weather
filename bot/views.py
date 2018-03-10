@@ -2,22 +2,12 @@
 import os
 import logging
 
-from django.http import HttpResponseForbidden, HttpResponseBadRequest
+from django.http import HttpResponse, HttpResponseForbidden, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
-from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
 
-from linebot import (
-    LineBotApi, WebhookHandler,
-    HttpResponse)
-from linebot.exceptions import (
-    InvalidSignatureError,
-    LineBotApiError)
-from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
-)
+from linebot import LineBotApi, WebhookHandler
+from linebot.exceptions import InvalidSignatureError, LineBotApiError
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 CHANNEL_SECRET = os.environ['CHANNEL_SECRET']
