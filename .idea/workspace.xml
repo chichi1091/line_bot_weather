@@ -43,8 +43,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+            <state relative-caret-position="536">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
               <folding>
                 <element signature="e#26#35#0" expanded="true" />
               </folding>
@@ -323,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520677492668</updated>
-      <workItem from="1520677499303" duration="10367000" />
+      <workItem from="1520677499303" duration="10536000" />
     </task>
     <task id="LOCAL-00001" summary="heroku準備&#10;アクセストークンを環境変数より取得">
       <created>1520679388524</created>
@@ -535,11 +535,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520689473471</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="メッセージ送信">
+      <created>1520689856740</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1520689856740</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10367000" />
+    <option name="totallyTimeSpent" value="10536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="126" y="147" width="1440" height="821" extended-state="0" />
@@ -603,7 +610,8 @@
     <MESSAGE value="サンプルを元に修正" />
     <MESSAGE value="ヘッダー情報の取得" />
     <MESSAGE value="bodyの取得" />
-    <option name="LAST_COMMIT_MESSAGE" value="bodyの取得" />
+    <MESSAGE value="メッセージ送信" />
+    <option name="LAST_COMMIT_MESSAGE" value="メッセージ送信" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -674,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        <state relative-caret-position="536">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
           <folding>
             <element signature="e#26#35#0" expanded="true" />
           </folding>
