@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o#t3*yl&wu)sw@w+)(t8e(8sd2wj*c)h%04eei+dd-1l-yg4&6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -75,10 +76,7 @@ WSGI_APPLICATION = 'line_bot_weather.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config()
 }
 
 
@@ -119,3 +117,40 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = ['*']
+
+STATIC_ROOT = 'staticfiles'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'stream': sys.stdout
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+        '': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        }
+    }
+}
