@@ -41,8 +41,8 @@ class LineBotView(APIView):
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    logger.info(event.message.text)
-    
+    logger.info(event)
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text))
