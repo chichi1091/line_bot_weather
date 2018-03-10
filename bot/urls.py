@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 from django.conf.urls import url
-from . import views
+from . import views as lineBotView
 
 urlpatterns = [
-    url(r'^callback', views.callback),
+    url(r'^callback', lineBotView.as_view()),
 ]
