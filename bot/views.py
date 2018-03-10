@@ -21,6 +21,7 @@ class LineBotView(APIView):
     permission_classes = (AllowAny,)
 
     def post(self, request, format=None):
+        logger.debug(request.POST)
         reply = ""
         for e in request.POST['events']:
             logger.info("{0}".format(e))
