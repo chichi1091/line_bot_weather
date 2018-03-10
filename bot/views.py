@@ -30,7 +30,7 @@ class LineBotView(APIView):
 
             if message_type == 'text':
                 text = e['message']['text']
-                reply += reply_text(reply_token, text)
+                reply += self.reply_text(reply_token, text)
 
         return Response(reply)
 
