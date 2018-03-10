@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ea2d7533-c477-48c5-b4ab-2b25b468579e" name="デフォルト" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
+      <change beforePath="$PROJECT_DIR$/line_bot_weather/settings.py" afterPath="$PROJECT_DIR$/line_bot_weather/settings.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/line_bot_weather/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="420">
+              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding>
                 <element signature="e#317#326#0" expanded="true" />
               </folding>
@@ -30,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -88,8 +88,8 @@
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/bot/views.py" />
         <option value="$PROJECT_DIR$/bot/urls.py" />
-        <option value="$PROJECT_DIR$/line_bot_weather/settings.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/line_bot_weather/settings.py" />
       </list>
     </option>
   </component>
@@ -323,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520677492668</updated>
-      <workItem from="1520677499303" duration="5341000" />
+      <workItem from="1520677499303" duration="5558000" />
     </task>
     <task id="LOCAL-00001" summary="heroku準備&#10;アクセストークンを環境変数より取得">
       <created>1520679388524</created>
@@ -388,11 +388,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520684176744</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="gunicorn修正">
+      <created>1520684363601</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1520684363601</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5341000" />
+    <option name="totallyTimeSpent" value="5558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1806" y="177" width="1440" height="821" extended-state="0" />
@@ -445,7 +452,8 @@
     <MESSAGE value="認証等修正" />
     <MESSAGE value="クラス化" />
     <MESSAGE value="csrf有効" />
-    <option name="LAST_COMMIT_MESSAGE" value="csrf有効" />
+    <MESSAGE value="gunicorn修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="gunicorn修正" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -506,21 +514,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/line_bot_weather/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-          <folding>
-            <element signature="e#317#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/line_bot_weather/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <element signature="e#317#326#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
