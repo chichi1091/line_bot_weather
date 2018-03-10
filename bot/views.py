@@ -62,7 +62,7 @@ def handle_message(event):
 
     message = json.get('title', 'タイトル') + "\r\n"
     message += json.get('description', '説明') + "\r\n"
-    message += json.get('forecasts', '詳細') + "\r\n"
+    message += "%s" % json.get('forecasts', '詳細')
 
     line_bot_api.reply_message(
         event.reply_token,
