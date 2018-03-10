@@ -29,9 +29,7 @@ class LineBotView(APIView):
     permission_classes = (AllowAny,)
 
     def post(self, request, format=None):
-        for m in request.META:
-            logger.info(m)
-        signature = request.META['HTTP_X-Line-Signature']
+        signature = request.META['HTTP_X_LINE_SIGNATURE']
 
         try:
             handler.handle(request.raw_post_data, signature)
