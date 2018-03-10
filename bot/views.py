@@ -68,7 +68,7 @@ def handle_message(event):
             telop = detail['telop']
             min = detail['temperature']['min'].get('celsius', '?') if detail['temperature']['min'] is not None else "?"
             max = detail['temperature']['max'].get('celsius', '?') if detail['temperature']['max'] is not None else "?"
-            message += "{0}({1}):{2} {3}℃/{4}℃ \r\n".format(dateLabel, date, telop, min, max)
+            message += "{0}({1}):{2} {3}℃/{4}℃ \r\n\r\n".format(dateLabel, date, telop, min, max)
 
         line_bot_api.reply_message(
             event.reply_token,
