@@ -3,6 +3,7 @@ import os
 import json
 from linebot import HttpResponse
 import requests
+import logging
 
 REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
 ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
@@ -11,10 +12,14 @@ HEADER = {
     "Authorization": "Bearer " + ACCESS_TOKEN
 }
 
+logger = logging.getLogger(__name__)
+
 
 def callback(request):
     reply = ""
     for e in request.json['events']:
+        logger.info("{0}".format(e))
+
         reply_token = e['replyToken']
         message_type = e['message']['type']
 
