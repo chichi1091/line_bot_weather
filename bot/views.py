@@ -1,10 +1,11 @@
 # -*- encoding: utf-8 -*-
+import os
 import json
 from linebot import HttpResponse
 import requests
 
 REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
-ACCESS_TOKEN = 'ENTER YOUR Channel Access Token'
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 HEADER = {
     "Content-Type": "application/json",
     "Authorization": "Bearer " + ACCESS_TOKEN
