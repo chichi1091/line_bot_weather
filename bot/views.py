@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-import json
 import os
 import logging
 
@@ -32,9 +31,9 @@ class LineBotView(APIView):
     def post(self, request, format=None):
         signature = request.META['HTTP_X_LINE_SIGNATURE']
 
-        logger.info(json.dumps(request.body, ensure_ascii=False))
+        logger.info(request)
         try:
-            handler.handle(json.dumps(request.body, ensure_ascii=False), signature)
+            handler.handle(request.body, signature)
         except InvalidSignatureError:
             return Response(HTTP_400_BAD_REQUEST)
 
