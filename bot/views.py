@@ -49,7 +49,7 @@ def default(event):
 def handle_message(event):
     logger.info(event)
 
-    if event.message.text.find('天気'):
+    if event.message.text.find('天気') >= 0:
         result = requests.get("http://weather.livedoor.com/forecast/webservice/json/v1?city=200010")
         if result.status_code != 200:
             line_bot_api.reply_message(
