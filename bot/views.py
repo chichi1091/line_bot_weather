@@ -1,9 +1,11 @@
 # -*- encoding: utf-8 -*-
 import os
 import json
-from linebot import HttpResponse
 import requests
 import logging
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
 
 REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
 ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
@@ -15,6 +17,8 @@ HEADER = {
 logger = logging.getLogger(__name__)
 
 
+@api_view(['POST'])
+@permission_classes((AllowAny,))
 def callback(request):
     reply = ""
     for e in request.json['events']:
@@ -27,7 +31,7 @@ def callback(request):
             text = e['message']['text']
             reply += reply_text(reply_token, text)
 
-    return HttpResponse(reply)
+    return Response(reply)
 
 
 def reply_text(reply_token, text):
