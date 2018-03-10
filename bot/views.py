@@ -32,7 +32,7 @@ class LineBotView(APIView):
         signature = request.META['HTTP_X_LINE_SIGNATURE']
 
         try:
-            handler.handle(request.raw_post_data, signature)
+            handler.handle(request.body, signature)
         except InvalidSignatureError:
             return Response(HTTP_400_BAD_REQUEST)
 
