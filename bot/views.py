@@ -31,6 +31,7 @@ class LineBotView(APIView):
     def post(self, request, format=None):
         signature = request.META['HTTP_X_LINE_SIGNATURE']
 
+        logger.info(request.body)
         try:
             handler.handle(request.body, signature)
         except InvalidSignatureError:
