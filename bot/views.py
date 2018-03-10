@@ -22,7 +22,7 @@ class LineBotView(APIView):
 
     def post(self, request, format=None):
         reply = ""
-        for e in request.json['events']:
+        for e in request.POST['events']:
             logger.info("{0}".format(e))
 
             reply_token = e['replyToken']

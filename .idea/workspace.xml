@@ -43,8 +43,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+            <state relative-caret-position="161">
+              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
                 <element signature="e#26#35#0" expanded="true" />
               </folding>
@@ -323,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520677492668</updated>
-      <workItem from="1520677499303" duration="6490000" />
+      <workItem from="1520677499303" duration="6696000" />
     </task>
     <task id="LOCAL-00001" summary="heroku準備&#10;アクセストークンを環境変数より取得">
       <created>1520679388524</created>
@@ -437,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520685225911</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="エラー修正">
+      <created>1520685545367</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1520685545367</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6490000" />
+    <option name="totallyTimeSpent" value="6696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="126" y="147" width="1440" height="821" extended-state="0" />
@@ -500,7 +507,8 @@
     <MESSAGE value="gunicornをインストール" />
     <MESSAGE value="psycopg2-binaryをインストール" />
     <MESSAGE value="バインディング修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="バインディング修正" />
+    <MESSAGE value="エラー修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="エラー修正" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -571,8 +579,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+        <state relative-caret-position="161">
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="e#26#35#0" expanded="true" />
           </folding>
