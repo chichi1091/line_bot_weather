@@ -44,9 +44,9 @@
         <entry file="file://$PROJECT_DIR$/bot/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <caret line="34" column="63" lean-forward="false" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
               <folding>
-                <element signature="e#26#35#0" expanded="true" />
+                <element signature="e#26#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -323,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520677492668</updated>
-      <workItem from="1520677499303" duration="9316000" />
+      <workItem from="1520677499303" duration="9546000" />
     </task>
     <task id="LOCAL-00001" summary="heroku準備&#10;アクセストークンを環境変数より取得">
       <created>1520679388524</created>
@@ -500,11 +500,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520688551046</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="bodyの取得">
+      <created>1520688728945</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1520688728945</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9316000" />
+    <option name="totallyTimeSpent" value="9546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="126" y="147" width="1440" height="821" extended-state="0" />
@@ -640,9 +647,9 @@
     <entry file="file://$PROJECT_DIR$/bot/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <caret line="34" column="63" lean-forward="false" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
           <folding>
-            <element signature="e#26#35#0" expanded="true" />
+            <element signature="e#26#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
