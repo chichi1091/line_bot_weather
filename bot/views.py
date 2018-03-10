@@ -60,9 +60,11 @@ def handle_message(event):
     json = json.loads(result.text)
     logger.info(json)
 
-    message = json.get('title', 'タイトル') + "\r\n"
-    message += json.get('description', '説明') + "\r\n"
-    message += "%s" % json.get('forecasts', '詳細')
+    message = ''
+    for detail in json['forecasts']:
+        message += "{0}({1}):{2} {3}℃/{4}℃ \r\n".format(detail['dateLabel'], detail['date'], detail['telop']
+                                                   , detail['temperature']['min'], detail['temperature']['max'])
+
 
     line_bot_api.reply_message(
         event.reply_token,
